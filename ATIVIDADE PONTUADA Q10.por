@@ -1,40 +1,41 @@
 programa {
   funcao inicio() {
-    //DECLARANDO VARI¡VEIS
+    //DECLARANDO VARI√ÅVEIS
     real litro , valorGasolina , valorFinal , descontoFinal , valorAlcool , desconto
     inteiro opcaoCombustivel
-    //SOLICITANDO DADOS AO USU¡RIO
-    escreva("SELECIONE A OP«√O DESEJADA:")
-    escreva("\n(1) ¡LCOOL \n(2) GASOLINA \nSELECIONE A OP«√O: ")
+    //SOLICITANDO DADOS AO USU√ÅRIO
+    escreva("SELECIONE A OP√á√ÉO DESEJADA:")
+    escreva("\n(1) √ÅLCOOL \n(2) GASOLINA \nSELECIONE A OP√á√ÉO: ")
     leia(opcaoCombustivel)
     limpa()
  
     //INICIANDO
       escolha(opcaoCombustivel) {
-        //SISTEMA DO ¡LCOOL
-        caso 1: escreva("PRE«O DO LITRO DO ¡LCOOL: R$3.79")
-        escreva("\nSELECIONE A QUATIDADE DESEJADA DE ¡LCOOL (POR LITRO): ")
+        //SISTEMA DO √ÅLCOOL
+        caso 1: escreva("PRE√áO DO LITRO DO √ÅLCOOL: R$3.79")
+        escreva("\nSELECIONE A QUATIDADE DESEJADA DE √ÅLCOOL (POR LITRO): ")
         leia(litro)
-        //VALORES DO ¡LCOOL
+        //VALORES DO √ÅLCOOL
         valorAlcool = 3.79
         valorFinal = valorAlcool * litro
         se(litro <= 25) { 
           desconto = (valorFinal * 2) / 100
           descontoFinal = valorFinal - desconto
-        //DESCONTO DO ¡LCOOL
-          escreva("DESCONTO DE 2% APLICADO")
+        //DESCONTO DO √ÅLCOOL
+          escreva("\nVALOR TOTAL: R$" , valorFinal)
+          escreva("\nDESCONTO DE 2% APLICADO")
           escreva("\nVALOR FINAl: R$" , descontoFinal)
         
         }senao se(litro < 25) {
           desconto = (valorFinal * 4) / 100
           descontoFinal = valorFinal - desconto
-
-          escreva("DESCONTO DE 4% APLICADO")
+          escreva("\nVALOR TOTAL: " , valorFinal)
+          escreva("\nDESCONTO DE 4% APLICADO")
           escreva("\nVALOR FINAL: R$" , descontoFinal) 
         } 
         pare
         caso 2: //SISTEMA DA GASOLINA
-        escreva("PRE«O DO LITRO DA GASOLINA: R$6.59")
+        escreva("PRE√áO DO LITRO DA GASOLINA: R$6.59")
         escreva("\nSELECIONE A QUANTIDADE DESEJADA DE GASOLINA (POR LITRO): ")
         leia(litro)
         //VALORES DA GASOLINA
@@ -43,18 +44,19 @@ programa {
         se(litro < 25) {
           desconto = (valorFinal * 3) / 100
           descontoFinal = valorFinal - desconto
-          
-          escreva("DESCONTO DE 3% APLICADO")
+          escreva("\nVALOR TOTAL: R$" , valorFinal)
+          escreva("\nDESCONTO DE 3% APLICADO")
           escreva("\nVALOR FINAL: R$" , descontoFinal)
         }senao se(litro > 25) {
           desconto = (valorFinal * 5) / 100
           descontoFinal = valorFinal - desconto
          //DESCONTOS DA GASOLINA
-          escreva("DESCONTO DE 5% APLICADO")
+          escreva("\nVALOR TOTAL: RS" , valorFinal)
+          escreva("\nDESCONTO DE 5% APLICADO")
           escreva("\nVALOR FINAL: R$" , descontoFinal)
         }
        pare
-      caso contrario: escreva("SELECIONE UMA OP«√O V¡LIDA") }
+      caso contrario: escreva("SELECIONE UMA OP√á√ÉO V√ÅLIDA") }
       //FIM DO PROGRAMA
       }
 
