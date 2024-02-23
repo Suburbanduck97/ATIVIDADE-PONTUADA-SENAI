@@ -1,5 +1,8 @@
-programa{
-	funcao inicio(){
+programa
+{
+
+	funcao inicio()
+{
 	//DECLARANDO VARIÁVEL
 	cadeia Nome , EstadoCivil , Sexo
 	inteiro AnosCasada = 0
